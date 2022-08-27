@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.hero-container {
+    height: 100vh;
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: space-between;
+
+}
+
+.expanding-cards {
+    height: 70vh;
+    display: flex;
+}
+
+.hero-text {
+    margin-left: 5rem;
+    
+}
+
+.hero-text h1 {
+    font-size: 5rem;
+}
+
+.hero-text h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+}
+
+.hero-text h4 {
+    font-size: .8rem;
+}
+
+/* Expanding cards */
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 0.5;
+    border-radius: 50px;
+    margin: 0.5rem;
+    text-align: center;
+    transition: flex 0.7s ease-in;
+    cursor: pointer;
+}
+
+.panel h2 {
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+
+}
+
+.panel.active h2 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+
+/* Media queries */
+@media (min-width: 2260px) {
+    .hero-text {
+        margin-left: 14rem;
+        
+    }
+}
+
+@media (max-width: 1500px) {
+    .panel:nth-of-type(4) {
+        display: none;
+    }
+
+    .panel:nth-of-type(3) {
+        display: none;
+    }
+}
+
+
+@media (max-width: 1130px) {
+    .hero-container {
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .expanding-cards {
+        margin-bottom: 2.2rem;
+    }
+
+    .hero-text {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 4rem;
+    }
+    
+    .hero-text h3 {
+        font-size: 1.2rem;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+    }
+    
+    .hero-text h4 {
+        font-size: .8rem;
+    }
+}
+
+
+@media (max-width: 600px) {
+    
+.hero-container {
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.expanding-cards {
+    height: 70vh;
+}
+
+.hero-text {
+    margin-left: 2.5rem;
+    text-align: center;
+    margin: 0 auto;
+    
+}
+
+.hero-text h1 {
+    font-size: 2.4rem;
+}
+
+.hero-text h3 {
+    font-size: 0.8rem;
+    margin-top: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.hero-text h4 {
+    font-size: .6rem;
+}
+}
+
+
+/* Webkit to hide scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
